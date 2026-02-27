@@ -7,10 +7,10 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import axiousInstance from '../../axiosinterceptor';
+import axiosInstance from '../../axiosinterceptor';
 
 const Home = () => {
- let token=localStorage.getItem('token');
+ let token=localStorage.getItem('user');
   const [blogs, setBlogs] = useState([]);
   const [likes, setLikes] = useState({});
   const [previewImg, setPreviewImg] = useState(null);

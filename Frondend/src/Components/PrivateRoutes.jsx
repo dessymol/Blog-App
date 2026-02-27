@@ -3,7 +3,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 
 
 const PrivateRoutes = () => {
-    const token =localStorage.getItem('token');
+    const token =localStorage.getItem('user');
     let verifyUser=false
     if(token)
     {

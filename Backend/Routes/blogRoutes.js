@@ -6,9 +6,9 @@ const jwt =require('jsonwebtoken')
 
 //Adding middleware
 function verifytoken(req,res,next){
-    let logintoken= req.headers.token;
+    let token= req.headers.token;
     try{
-        if(!logintoken)throw 'Unauthorised Access'
+        if(!token)throw 'Unauthorised Access'
         let paylod=jwt.verify(token,"secret")
         if(!paylod)throw 'Unauthorised Access'
         next()
