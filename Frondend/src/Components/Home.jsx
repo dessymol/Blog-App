@@ -24,7 +24,7 @@ const Home = () => {
   }, []);
 
   const deleteBlog = (id) => {
-    axiosInstance.delete(`http://localhost:3000/blog/delete/${id}`)
+    axiosInstance.delete(`/api/blog/delete/${id}`)
       .then(() => {
         setBlogs(blogs.filter(blog => blog._id !== id));
       })

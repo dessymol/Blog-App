@@ -27,7 +27,7 @@ const Add = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axiosInstance.post('http://localhost:3000/blog/add', blog)
+    axiosInstance.post('/api/blog/add', blog)
       .then(res => {
         alert("Blog added successfully 🎉");
 

@@ -3,7 +3,7 @@ import axios from "axios";
 
 //To create a new instance of axios
 const axiousInstance=axios.create({
-    baseURL:'http://localhost:3000'
+    baseURL:'/api', //👉 base URL for all requests
 })
 axiousInstance.interceptors.request.use((config)=>{  //To read the value of 
     console.log(config);

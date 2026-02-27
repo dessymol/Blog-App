@@ -26,7 +26,7 @@ const Login = () => {
   e.preventDefault();
 
   try {
-    const res = await axios.post('http://localhost:3000/auth/login', form);
+    const res = await axios.post('/api/auth/login', form);
     alert(res.data.message);
     
     if(res.data.usertoken){

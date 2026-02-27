@@ -22,7 +22,7 @@ const Edit = () => {
   });
 
   useEffect(() => {
-    axiosInstance.get(`http://localhost:3000/blog/${id}`)
+    axiosInstance.get(`/api/blog/${id}`)
       .then(res => setBlog(res.data))
       .catch(err => console.log(err));
   }, [id]);
@@ -34,7 +34,7 @@ const Edit = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axiosInstance.put(`http://localhost:3000/blog/update/${id}`, blog)
+    axiosInstance.put(`/api/blog/update/${id}`, blog)
       .then(() => {
         alert("Blog Updated Successfully ✨");
         navigate('/home');
