@@ -18,7 +18,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:3000/blog')
+   axios.get('/api/blog')
       .then(res => setBlogs(res.data))
       .catch(err => console.log(err));
   }, []);
